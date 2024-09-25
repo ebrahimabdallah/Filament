@@ -1,3 +1,9 @@
+* **image explane case** 
+
+![Screenshot 2024-09-25 091946](https://github.com/user-attachments/assets/a537f100-9ab5-4fd5-ab78-6d5e900f525f)
+
+
+
 ```
  public function getTabs(): array
     {
@@ -19,4 +25,3 @@
     }
 ```
 
-![Screenshot 2024-09-25 091946](https://github.com/user-attachments/assets/a537f100-9ab5-4fd5-ab78-6d5e900f525f)
