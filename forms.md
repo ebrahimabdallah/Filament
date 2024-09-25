@@ -59,8 +59,15 @@ https://filamentphp.com/docs/3.x/forms/fields/repeater
 https://filamentphp.com/docs/3.x/infolists/layout/section
 ```
 
-
-
+* **image upload**
+```
+  Forms\Components\FileUpload::make('test_image')
+                    ->label(__('forms.test_image')) 
+                    ->directory('uploads/images/car') // store in path
+                    ->validationMessages([
+                        'required' => __('validation.required'),
+                    ]), // validation 
+```
 
 
 
