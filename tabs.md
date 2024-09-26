@@ -24,4 +24,8 @@
         ];
     }
 ```
+* **in table if have enum status you need show it and translated 
+```
+ ->formatStateUsing(fn ($state) => $state ? __('forms.inside') : __('forms.outside')),
 
+```
