@@ -69,7 +69,16 @@ https://filamentphp.com/docs/3.x/infolists/layout/section
                     ]), // validation 
 ```
 
-
+* **RichEditor Input** 
+![image](https://github.com/user-attachments/assets/89083c7d-e90b-4285-a783-a7fd09d3cb3f)
+```
+ RichEditor::make('content')
+  ->toolbarButtons([
+        'attachFiles',
+        'blockquote',
+        'bold',
+.etc...
+```
 
 
 
