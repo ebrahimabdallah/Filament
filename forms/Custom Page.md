@@ -76,19 +76,20 @@ class CreateServicesBill extends CreateRecord
   
 * Here’s an example of the mount method implementation:
 ```
-public function mount(int | string $record): void
-{
-    // Resolve the record from the provided ID or slug
-    $this->record = $this->resolveRecord($record);
-    
-    // Alternatively, fetch a specific parameter (e.g., 'id') from the request URL
-    $recordId = request()->query('id');
+ public function mount(): void
+    {
+         $recordId = request()->query('id');
 
-    // Pass the resolved record ID to another function, such as filling the form with the 'material_bill_id'
-    $this->form->fill([
-        'material_bill_id' => $recordId,
-    ]);
-}
+        if ($recordId !== null && is_numeric($recordId)) {
+            $this->service_bill = ServicesBill::find($recordId);
+
+            if (!$this->service_bill) {
+                abort(404, 'Record not found.');
+            }
+        } else {
+            abort(400, 'Invalid or missing record ID.');
+        }
+    }
 
 ```
  
