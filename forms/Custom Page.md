@@ -53,7 +53,7 @@ class CreateServicesBill extends CreateRecord
              ->label('  ')
              ->icon('heroicon-o-printer')
              ->color(' ')
-             ->url(fn (Name Custom $record): string => static::getUrl('single', ['id' => $record->id]))
+             ->url(fn (Model $record): string => static::getUrl('single', ['id' => $record->id]))
          
              ])
 ```
