@@ -57,9 +57,7 @@ class CreateServicesBill extends CreateRecord
          
              ])
 ```
-```
-php artisan make:filament-page SortUsers --resource=UserResource --type=custom
-```
+
 * UserResource --> Resource include page custom 
 * **notes**
 * use to make forms 
