@@ -1,0 +1,18 @@
+
+```
+public static function table(Table $table): Table
+{
+    return $table
+        ->modifyQueryUsing(fn (Builder $query) => $query->withoutGlobalScopes());
+}
+```
+* custom create 
+
+```
+protected function mutateFormDataBeforeCreate(array $data): array
+{
+    $data['user_id'] = auth()->id();
+    // write any logic before saving 
+    return $data;
+}
+```
