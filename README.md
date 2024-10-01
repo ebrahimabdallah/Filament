@@ -8,6 +8,7 @@
 * **Widgets and Dashboard**: You can build custom widgets and dashboards to display reports or key metrics.
 * **Access Control**: Built-in user role and permission system to manage access control within the admin panel.
 * **Custom Actions**: You can add custom buttons and actions to your forms and tables, such as exporting data, bulk operations, or custom workflows.
+* https://filamentphp.com/docs/3.x/actions/prebuilt-actions/create
 * **Custom Page** if you need write code or create pages special hard logic out resource you can make a suctom page such :- print screen ..
 # Installation
 ```
