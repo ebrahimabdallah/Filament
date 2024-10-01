@@ -80,7 +80,20 @@ https://filamentphp.com/docs/3.x/infolists/layout/section
 .etc...
 ```
 * stop form
-* halt()
+```
+ halt()
+```
+* Replicate action
+```
+public function table(Table $table): Table
+{
+    return $table
+        ->actions([
+            ReplicateAction::make(),
+            // ...
+        ]);
+}
+```
 
 
 
