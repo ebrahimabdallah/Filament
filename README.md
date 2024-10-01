@@ -20,7 +20,10 @@ php artisan filament:install --panels
 ```
 php artisan make:filament-user
 ```
-
+* **Create Resource**
+```
+php artisan make:filament-resource ServiceItem --generate
+```
 
 # Managing relationships
 
