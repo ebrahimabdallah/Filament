@@ -72,12 +72,25 @@ https://filamentphp.com/docs/3.x/infolists/layout/section
 * **RichEditor Input** 
 ![image](https://github.com/user-attachments/assets/89083c7d-e90b-4285-a783-a7fd09d3cb3f)
 ```
- RichEditor::make('content')
-  ->toolbarButtons([
+RichEditor::make('content')
+    ->toolbarButtons([
         'attachFiles',
         'blockquote',
         'bold',
-.etc...
+        'bulletList',
+        'codeBlock',
+        'h2',
+        'h3',
+        'italic',
+        'link',
+        'orderedList',
+        'redo',
+        'strike',
+        'underline',
+        'undo',
+    ])
+
+
 ```
 * stop form
 ```
