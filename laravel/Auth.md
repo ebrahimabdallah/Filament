@@ -81,7 +81,7 @@ class AuthController extends Controller
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'Mobile number or password is incorrect',  // Corrected the error message
+                'message' => 'Mobile number or password is incorrect',   
                 'data' => [],
             ], Response::HTTP_UNAUTHORIZED);
         }
@@ -95,8 +95,8 @@ class AuthController extends Controller
         // Save refresh token in the database
         RefreshToken::create([
             'user_id' => $user->id,
-            'token' => hash('sha256', $refreshToken),  // Hashing the refresh token before storing it
-            'expires_at' => now()->addDays(30),  // Set expiry to 30 days
+            'token' => hash('sha256', $refreshToken),   
+            'expires_at' => now()->addDays(30),  
         ]);
     
         // Return the response with user, access token, and refresh token
@@ -104,7 +104,7 @@ class AuthController extends Controller
             'status' => 'success',
             'message' => 'Login successful',
             'data' => [
-                'user' => new UserResource($user),  // Assuming you're using a resource class to format user data
+                'user' => new UserResource($user),  
                 'token' => $accessToken,
                 'refresh_token' => $refreshToken,
             ],
