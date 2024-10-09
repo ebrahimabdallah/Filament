@@ -6,3 +6,28 @@
 ```
  ->toggleable(isToggledHiddenByDefault: true),
 ```
+* actions
+
+  ```
+
+  ->action(function (array $data, $record) {
+                          
+                            if ($user) {
+                                 
+                              //logic
+                                ]);
+                
+                                Notification::make()
+                                    ->title('Success')
+                                    ->body(__('pages.add_plan'))
+                                    ->success()
+                                    ->send();
+                            } else {
+                                Notification::make()
+                                    ->title('Error')
+                                    ->body(__('pages.faild_plan'))
+                                    ->danger()
+                                    ->send();
+                            }
+                        })
+  ```
