@@ -1,6 +1,5 @@
 ```
-Forms\Components\Grid::make(3) // Create a 3-column grid
-    ->schema([
+     ->schema([
         Forms\Components\TextInput::make('price')
             ->required()
             ->numeric()
