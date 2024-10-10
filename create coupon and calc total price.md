@@ -1,3 +1,7 @@
+  * This schema defines the fields for the product's pricing information:
+ * - **Price**: The base price of the product, which accepts numeric values up to 12 digits.
+ * - **Discount**: Percentage discount applied to the base price, with a maximum of 2 digits.
+ * - **Final Price**: A read-only field that calculates the price after the discount is applied.
 ```
      ->schema([
         Forms\Components\TextInput::make('price')
