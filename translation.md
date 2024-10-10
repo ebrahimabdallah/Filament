@@ -30,13 +30,13 @@
  * translate heading in custom page
 
     public function getHeading(): string{
-        return __('filament-panels::pages/dashboard/user.RetrievalMaterial');
+        return __('pages.home');
     }
 ```
  * translate any title in custom page 
 ```
   public function getTitle(): string | Htmlable{
-        return __('filament-panels::pages/dashboard/labels.retrieval_materials');
+        return __('pages.home');
     }
 ```
   
