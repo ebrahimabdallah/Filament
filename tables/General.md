@@ -23,3 +23,12 @@
   ->label(__('admin.status')),
 
 ```
+* How to improve table pagination performance
+```
+protected function paginateTableQuery(Builder $query): Paginator
+{
+    return $query->fastPaginate(($this->getTableRecordsPerPage() === 'all') ? $query->count() : $this->getTableRecordsPerPage());
+}
+```
+
+
